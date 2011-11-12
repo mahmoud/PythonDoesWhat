@@ -13,5 +13,5 @@ if __name__ == "__main__":
     
     for pdw, name, ispkg in pdws:
         mod = pdw.find_module(name).load_module(name)
-        print name, doctest.testmod(mod, report=True)
+        print name, doctest.testmod(mod, report=True, optionflags=doctest.ELLIPSIS)
 

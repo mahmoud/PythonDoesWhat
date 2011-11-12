@@ -3,7 +3,7 @@
 >>> b = B()
 >>> isinstance(b, A)
 True
->>> B.__bases__ #doctest: +ELLIPSIS
+>>> B.__bases__
 (<class ...
 >>> B.__bases__ = ()
 >>> isinstance(b, A)
@@ -17,4 +17,4 @@ class B(A): pass
 
 title = "Change class inheritance"
 date = (2010, 12, 3, 1, 12)
-author = "Kurt Rose"
+author = "Kurt"

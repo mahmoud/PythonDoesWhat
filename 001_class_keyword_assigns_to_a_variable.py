@@ -9,7 +9,7 @@ A thing.
 >>> g
 1
 >>> f()
->>> g #doctest: +ELLIPSIS
+>>> g
 <class ...
 
 The class keyword in python is exactly equivalent to a call to the type function, even down to how it interacts with the global keyword.

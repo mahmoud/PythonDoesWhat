@@ -3,7 +3,6 @@
 >>> a = A()
 >>> type(a)   # doctest:+ELLIPSIS
 <class '....A'>
->>> import json
 >>> transform(a, json.JSONDecoder)
 >>> type(a)
 <class 'json.decoder.JSONDecoder'>
