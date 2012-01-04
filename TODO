@@ -3,6 +3,14 @@ Future posts
  * What is a class? (can't disassemble them)
  * When does a function bind? (do functions set in init bind? in new?)
  * What is the execution order of class definition, metaclass definition, and the __init__ and __new__ of each?
+ * What is the evaluation order of __getattr__ and __getattribute__ for instances, classes, metaclasses, etc.?
+ * What are the differences between list() and []? Example:
+    >>> list([])
+    []
+    >>> list(('hi','bye'))
+    ['hi', 'bye']
+    >>> [[]]
+    [[]]
 
 Tooling
  * Import in a doctest-like format
