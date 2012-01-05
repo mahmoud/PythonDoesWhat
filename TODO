@@ -11,6 +11,7 @@ Future posts
     ['hi', 'bye']
     >>> [[]]
     [[]]
+ * Can't have a function act as a generator and normal function (via branch, etc.; can't return and yield in the same function.)
 
 Tooling
  * Import in a doctest-like format

@@ -23,5 +23,5 @@ class attributedict(dict):
         dict.__init__(self, *a, **kw)
 
 title = "Attributedict: dictionary whose keys are also attributes"
-author = Kurt
+author = "Kurt"
 date = (2010, 12, 7, 16, 29)
