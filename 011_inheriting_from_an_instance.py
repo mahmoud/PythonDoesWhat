@@ -19,7 +19,7 @@ TypeError: 'A' object is not callable
 
 """
 
-title = "Inheriting from an instance"
-date = (2010, 12, 9, 11, 33)
+title  = "Inheriting from an instance"
+date   = (2010, 12, 9, 11, 33)
 author = "Kurt"
-tags = ("inheritance",)
+tags   = ("inheritance",)
