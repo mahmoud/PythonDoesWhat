@@ -12,6 +12,7 @@ Future posts
     >>> [[]]
     [[]]
  * Can't have a function act as a generator and normal function (via branch, etc.; can't return and yield in the same function.)
+ * Can't inherit from code (types.CodeType).
 
 Tooling
  * Import in a doctest-like format
