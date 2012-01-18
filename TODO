@@ -13,6 +13,8 @@ Future posts
     [[]]
  * Can't have a function act as a generator and normal function (via branch, etc.; can't return and yield in the same function.)
  * Can't inherit from code (types.CodeType).
+ * Generator expressions vs list comprehensions: generator expressions get an extra closure
+   * lambdas = [(lambda: i) for i in xrange(10)] vs. ((lambda: i) for i in xrange(10))
 
 Tooling
  * Import in a doctest-like format
