@@ -13,6 +13,8 @@ Future posts
     [[]]
  * Can't have a function act as a generator and normal function (via branch, etc.; can't return and yield in the same function.)
  * Can't inherit from code (types.CodeType).
+ * partial eval/exec (exec is a function in Python3)
+ * functools.update_wrapper sets code name to string? when it should be bytes? (according to Objects/codeobject.c)
 
 Tooling
  * Import in a doctest-like format
