@@ -1,3 +1,9 @@
+pdw_id   = 24
+title    = 'Local variable performance and dis'
+pub_date = (2011, 3, 14, 12, 13)
+author   = 'Kurt'
+tags     = ('local variables', 'performance', 'dis')
+
 """
 Local variables are significantly faster in Python. They are accessed as offsets from a stack, rather than looked up in a hashmap/dict.
 
@@ -6,7 +12,27 @@ Using the dis module, we can investigate this sort of backend behavior. There ar
 >>> import dis
 >>> sorted(x for x in dis.opname if 'LOAD' in x)
 ['LOAD_ATTR', 'LOAD_CLOSURE', 'LOAD_CONST', 'LOAD_DEREF', 'LOAD_FAST', 'LOAD_GLOBAL', 'LOAD_LOCALS', 'LOAD_NAME']
+"""
 
+# dis setup
+a = 1
+def global_var():
+    return a
+
+def nonlocal_var():
+    b = 2
+    def ret():
+        return b
+    return ret
+
+def local_var():
+    c = 3
+    return c
+
+def argument(v):
+    return v
+
+"""
 We'll get around to all of them someday, but for now we'll focus on LOAD_FAST, LOAD_DEREF, and LOAD_GLOBAL. LOAD_FAST is used to load variables in the local scope and function arguments (because they're just local variables). LOAD_DEREF is used to load variables in the enclosing scope. LOAD_GLOBAL is used for, you guessed it, globals (module-level scope).
 
 >>> dis.dis(global_var)     # doctest:+SKIP
@@ -32,29 +58,4 @@ Here is an example showing the use of local variables as a performance optimizat
    http://wiki.python.org/moin/PythonSpeed/PerformanceTips#Local_Variables
 """
 
-# performance test
-import timeit
-# TODO
 
-# dis setup
-a = 1
-def global_var():
-    return a
-
-def nonlocal_var():
-    b = 2
-    def ret():
-        return b
-    return ret
-
-def local_var():
-    c = 3
-    return c
-
-def argument(v):
-    return v
-
-title  = 'Local variable performance and dis'
-date   = (2011, 3, 14, 12, 13)
-author = 'Kurt'
-tags   = ('local variables', 'performance', 'dis')

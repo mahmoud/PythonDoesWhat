@@ -1,14 +1,13 @@
+pdw_id   = 22
+title    = "Custom string class"
+pub_date = (2011, 1, 21, 10, 03)
+author   = "Kurt"
+tags     = ("inheritance", "inspect", "functools", "classes", "string")
+
 """
-Here is how to make a sublcass of a string that has the same operations, but which return instances of that subclass.
-
->>> MyStr('cat')
-MyStr'cat'
->>> MyStr('cat')+'dog'
-MyStr'catdog'
->>> MyStr('cat')[1:]
-MyStr'at'
-
-If you're doing this, it's probably a bad code smell. 
+Someday you might think it's a good idea to make a string subclass that 
+has all the same operations, but returns instances of that subclass. 
+In case you were wondering:
 """
 
 import inspect
@@ -34,7 +33,13 @@ for name, f in inspect.getmembers(str, callable):
     if name not in ('__class__', '__new__', '__str__', '__init__', '__repr__'):
         setattr(MyStr, name, _mystr_wrap(f))
 
-title  = "Custom string class"
-date   = (2011, 1, 21, 10, 03)
-author = "Kurt"
-tags   = ("inheritance", "inspect", "functools", "classes")
+"""
+>>> MyStr('cat')
+MyStr'cat'
+>>> MyStr('cat')+'dog'
+MyStr'catdog'
+>>> MyStr('cat')[1:]
+MyStr'at'
+
+If you're doing this, it's probably a bad code smell. 
+"""

@@ -1,5 +1,12 @@
-#!/bin/env python
+pdw_id   = 3
+title    = "The many uses of type"
+pub_date = (2010, 12, 3, 13, 27)
+author   = "Kurt"
+tags     = ('type', 'class')
 """
+The ``type`` function is a gloriously powerful thing. Here are just a few
+ways it can be put to use.
+
 Use #1: call type to get the type of something
 >>> type(5)
 <type 'int'>
@@ -37,6 +44,4 @@ Use #4: inherit from type to make a meta-class
 hello meta world
 """
 
-title = "The many uses of type"
-date = (2010, 12, 3, 13, 27)
-author = "Kurt"
+

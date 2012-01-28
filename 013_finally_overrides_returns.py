@@ -1,11 +1,11 @@
+pdw_id   = 13
+title    = "finally block can override enclosed return statement"
+author   = "Kurt"
+pub_date = (2010, 12, 10, 12, 45)
+tags     = ("finally", "exceptions", "call order")
+
 """
 Always remember kids, when Python says finally, it means finally.
-
->>> print_then_return()
-finally
-'returns'
->>> override_return()
-'finally'
 """
 
 def print_then_return():
@@ -20,7 +20,12 @@ def override_return():
     finally:
         return "finally"
 
-title = "finally block can override enclosed return statement"
-date = (2010, 12, 10, 12, 45)
-author = "Kurt"
-tags = ("finally", "exceptions", "call order")
+"""
+>>> print_then_return()
+finally
+'returns'
+>>> override_return()
+'finally'
+"""
+
+

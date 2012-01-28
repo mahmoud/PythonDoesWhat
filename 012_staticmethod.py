@@ -1,12 +1,16 @@
+pdw_id   = 12
+title    = "How built-in ``staticmethod`` (could be) implemented"
+pub_date = (2010, 12, 9, 11, 51)
+author   = "Kurt"
+tags     = ('objects', 'static', 'descriptor protocol')
+
 """
-MH:
+The ``staticmethod()`` function, most commonly used as a decorator, takes a 
+method defined in a class and allows it to be called in an unbound fashion.
 
-The built-in staticmethod() function, most commonly used as a decorator, takes a method defined in a class and allows it to be called in an unbound fashion.
-
-This is an example of a pure-Python way you can simulate the behavior. Rest assured staticmethod is implemented in C and is the superior choice for actual use.
-
->>> C.foo()
-Hello, world!
+Rest assured, the built-in ``staticmethod`` is implemented in C and is the 
+superior choice for actual use, but sometimes it's fun to think of pure-Python 
+ways to simulate the behavior:
 """
 
 class static(object):
@@ -16,9 +20,16 @@ class static(object):
 class C(object):
     @static
     def foo():  # look, Ma, no 'self' or 'cls'
-        print "Hello, world!"
+        print "Yes, it works."
 
-title = "How built-in staticmethod (could be) implemented"
-date = (2010, 12, 9, 11, 51)
-author = "Kurt"
-tags = ('objects', 'static', 'descriptor protocol')
+"""
+Does it work?
+
+>>> C.foo()
+Yes, it works.
+
+"""
+
+
+
+
