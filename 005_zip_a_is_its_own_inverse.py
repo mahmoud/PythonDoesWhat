@@ -7,6 +7,6 @@
 [(1, 2, 3), ('a', 'b', 'c')]
 """
 
-title = "zip(*a) is its own inverse"
+title = "``zip(*a)`` is its own inverse"
 author = "Kurt"
 date = (2010, 12, 5, 12, 14)

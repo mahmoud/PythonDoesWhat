@@ -15,6 +15,10 @@ Future posts
  * Can't inherit from code (types.CodeType).
  * partial eval/exec (exec is a function in Python3)
  * functools.update_wrapper sets code name to string? when it should be bytes? (according to Objects/codeobject.c)
+ * Generator expressions vs list comprehensions: generator expressions get an extra closure
+   * lambdas = [(lambda: i) for i in xrange(10)] vs. ((lambda: i) for i in xrange(10))
+* Sorting a list of sets
+   * the set is moved until there are no subsets to its right
 
 Tooling
  * Import in a doctest-like format

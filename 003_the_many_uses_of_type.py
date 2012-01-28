@@ -37,6 +37,6 @@ Use #4: inherit from type to make a meta-class
 hello meta world
 """
 
-title = "the many uses of type"
-date = (2010, 12, 3, 1, 27)
+title = "The many uses of type"
+date = (2010, 12, 3, 13, 27)
 author = "Kurt"

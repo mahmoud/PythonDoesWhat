@@ -16,5 +16,5 @@ class A(): pass
 class B(A): pass
 
 title = "Change class inheritance"
-date = (2010, 12, 3, 1, 12)
+date = (2010, 12, 3, 13, 12)
 author = "Kurt"

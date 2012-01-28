@@ -12,3 +12,8 @@ If you want your class to work with arithmetic operators (like +, -, etc.), look
 class B(object):
     def __float__(self):
         return 0.5
+
+title  = 'Making your class work with built-in math functions'
+date   = (2011, 1, 5, 12, 20)
+author = 'Kurt'
+tags   = ('math',)

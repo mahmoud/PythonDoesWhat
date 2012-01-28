@@ -22,10 +22,20 @@ class B(A):
     testB = "B"
     testb = "B"
 
+"""
+this is just a comment test. remove me in a second
+"""
+
 def get_full_dict(obj):
     parent_dicts = [obj.__dict__] + [cls.__dict__ for cls in obj.__class__.__mro__ if cls.__name__ != "object"]
     return reduce(lambda a,b: dict(b.items() + a.items()), parent_dicts, {})
 
+"""
+another comment test.
+
+
+hehehhe
+"""
 
 title = "Get full inherited __dict__"
 author = "Kurt"

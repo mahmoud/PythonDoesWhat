@@ -20,7 +20,7 @@ We'll get around to all of them someday, but for now we'll focus on LOAD_FAST, L
 >>> dis.dis(local_var)      # doctest:+SKIP
 11          0 LOAD_CONST               1 (3)
             3 STORE_FAST               0 (c)
-
+<BLANKLINE>
 12          6 LOAD_FAST                0 (c)
             9 RETURN_VALUE        
 
@@ -54,3 +54,7 @@ def local_var():
 def argument(v):
     return v
 
+title  = 'Local variable performance and dis'
+date   = (2011, 3, 14, 12, 13)
+author = 'Kurt'
+tags   = ('local variables', 'performance', 'dis')

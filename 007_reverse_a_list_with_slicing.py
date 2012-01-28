@@ -8,4 +8,4 @@
 
 title = "Reverse a list with slicing"
 author = "Kurt"
-date = (2010, 12, 5, 1, 14)
+date = (2010, 12, 5, 13, 14)
