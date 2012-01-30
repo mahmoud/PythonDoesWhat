@@ -4,8 +4,6 @@ pub_date = (2010, 12, 27, 10, 48)
 author   = "Kurt"
 tags     = ("metaclasses", "inheritance")
 
-__all__ = ['ConjoinedMeta', 'A', 'B']
-
 """
 Metaclasses can be used to create all manner of mutant constructs. With 
 great power comes great responsibility, I suppose.
