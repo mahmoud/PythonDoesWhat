@@ -5,7 +5,7 @@ author   = "Kurt"
 tags     = ("math", "types", "int")
 
 """
-Quick! What's ``-5/100``? Or ``-5/100``?
+Quick! What's ``-5%100``? Or ``-5/100``?
 
 If you said -5 and 0, you'd be right... if this was C or Java.
 
