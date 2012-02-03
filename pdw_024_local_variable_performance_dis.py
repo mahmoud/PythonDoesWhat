@@ -62,9 +62,11 @@ enclosing scope. LOAD_GLOBAL is used for, you guessed it, globals
 12          6 LOAD_FAST                0 (v)
             9 RETURN_VALUE        
 
-Here is an example showing the use of local variables as a performance 
-optimization:
-   http://wiki.python.org/moin/PythonSpeed/PerformanceTips#Local_Variables
+
+For the curious, `here is an example showing the use of local variables as a performance optimization`__
+
+__ http://wiki.python.org/moin/PythonSpeed/PerformanceTips#Local_Variables
+
 """
 
 
