@@ -5,9 +5,12 @@ author   = 'Mahmoud'
 tags     = ('local variables', 'performance', 'dis')
 
 """
-Local variables are significantly faster in Python. They are accessed as offsets from a stack, rather than looked up in a hashmap/dict.
+Local variables are significantly faster in Python. They are accessed 
+as offsets from a stack, rather than looked up in a hashmap/dict.
 
-Using the dis module, we can investigate this sort of backend behavior. There are 8 distinct variable load routines that are used by the Python interpreter:
+Using the dis module, we can investigate this sort of backend behavior. 
+There are 8 distinct variable load routines that are used by the Python 
+interpreter:
 
 >>> import dis
 >>> sorted(x for x in dis.opname if 'LOAD' in x)
@@ -33,7 +36,12 @@ def argument(v):
     return v
 
 """
-We'll get around to all of them someday, but for now we'll focus on LOAD_FAST, LOAD_DEREF, and LOAD_GLOBAL. LOAD_FAST is used to load variables in the local scope and function arguments (because they're just local variables). LOAD_DEREF is used to load variables in the enclosing scope. LOAD_GLOBAL is used for, you guessed it, globals (module-level scope).
+We'll get around to all of them someday, but for now we'll focus on 
+LOAD_FAST, LOAD_DEREF, and LOAD_GLOBAL. LOAD_FAST is used to load 
+variables in the local scope and function arguments (because they're 
+just local variables). LOAD_DEREF is used to load variables in the 
+enclosing scope. LOAD_GLOBAL is used for, you guessed it, globals 
+(module-level scope).
 
 >>> dis.dis(global_var)     # doctest:+SKIP
 2           0 LOAD_GLOBAL              0 (a)
@@ -54,7 +62,8 @@ We'll get around to all of them someday, but for now we'll focus on LOAD_FAST, L
 12          6 LOAD_FAST                0 (v)
             9 RETURN_VALUE        
 
-Here is an example showing the use of local variables as a performance optimization:
+Here is an example showing the use of local variables as a performance 
+optimization:
    http://wiki.python.org/moin/PythonSpeed/PerformanceTips#Local_Variables
 """
 
