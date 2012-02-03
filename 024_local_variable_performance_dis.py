@@ -1,7 +1,7 @@
 pdw_id   = 24
 title    = 'Local variable performance and dis'
 pub_date = (2011, 3, 14, 12, 13)
-author   = 'Kurt'
+author   = 'Mahmoud'
 tags     = ('local variables', 'performance', 'dis')
 
 """

@@ -32,6 +32,6 @@ Let's see it in action:
 
 *Update*: we found `a similar recipe on ActiveState code`__. From 2005!
 
-.. _ActiveStateRecipe: http://code.activestate.com/recipes/361668/
-__ ActiveStateRecipe
+__ http://code.activestate.com/recipes/361668/
+
 """
