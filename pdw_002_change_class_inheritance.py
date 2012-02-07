@@ -6,7 +6,7 @@ tags     = ('inheritance',)
 
 """
 The super-classes of a class are available under the __bases__ attribute.  These
- can be modified to dynamically change the class inheritance tree.
+can be modified to dynamically change the class inheritance tree.
 
 A couple of volunteers from the audience, please.
 """
