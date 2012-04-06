@@ -5,17 +5,17 @@ pub_date = (2011, 5, 16, 17, 48)
 tags     = ('c', 'ctypes', 'ffi')
 
 """
-Like it or not, most of the code in the world is not written in Python. It's
-probably for the best, because one can only imagine how much maintaining some
-mid-90s, Python 1.4 library would suck today. But seriously, there are some 
-awesome libraries that rightfully make use of other language's advantages.
-And Python's OK with that:
+Like it or not, most of the code in the world is not written in Python. 
 
-Take, for instance, `the ssl module <http://docs.python.org/library/ssl.html>`_.
+It's probably for the best, because one can only imagine how much maintaining 
+some mid-90s, Python 1.4 library would suck today. But seriously, there are a
+lot of languages and libraries out there, and Python's OK with that.
+
+Take `the ssl module <http://docs.python.org/library/ssl.html>`_.
 `OpenSSL <http://www.openssl.org/>`_ is a powerful, open-source standard when it
 comes to libraries, but the ``ssl`` module only became a first-class core library
 in Python 2.6. And even then, OpenSSL has a lot of power to offer beyond what's
-exposed in the module. How do we get at that one obscure function?[1]_
+exposed in the module. How do we get at that one obscure function? [#]_
 
 Enter |ctypes|_, Python's convenient and powerful portal to the C FFI_. Given the
 prevalence and power of C, ``ctypes`` gives you access to everything from 
@@ -42,9 +42,8 @@ involved use cases, you'll probably want to look at Cython_ and Weave_.
 .. _Cython: http://cython.org
 .. _Weave: http://www.scipy.org/Weave
 
-.. [1] Historical note: before ``ctypes`` one could usually wrap the library in a
-   Python module and import it, but this meant building against a specific version
-   of Python and general overkill for many applications. That said, it's still not
-   uncommon; packages like Cython_ make it easier than ever.
+.. [#] Historical note: before ``ctypes``, one could wrap the library as a Python 
+   module, but this meant building against a specific version of Python, among
+   other headaches. That said, the practice still has its place.
 
 """

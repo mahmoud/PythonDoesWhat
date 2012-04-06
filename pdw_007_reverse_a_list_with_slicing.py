@@ -5,7 +5,7 @@ pub_date = (2010, 12, 5, 13, 14)
 tags     = ('list', 'slice', 'iterables')
 
 """
-Savvy readers[*]_ may be familiar with this syntax for copying a list:
+Savvy readers [*]_ may be familiar with this syntax for copying a list:
 >>> [1,2,3][:]
 [1, 2, 3]
 
