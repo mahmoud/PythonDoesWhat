@@ -19,6 +19,9 @@ Future posts
    * lambdas = [(lambda: i) for i in xrange(10)] vs. ((lambda: i) for i in xrange(10))
 * Sorting a list of sets
    * the set is moved until there are no subsets to its right
+ * Python has pretty strong types (stronger than Java), but there are some instances of weak typing
+   * int->long automatic conversion
+   * int->float coercion
 
 Tooling
  * Import in a doctest-like format
