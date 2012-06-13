@@ -22,6 +22,25 @@ Future posts
  * Python has pretty strong types (stronger than Java), but there are some instances of weak typing
    * int->long automatic conversion
    * int->float coercion
+* Garbage collect yourself (everything's ghostly! sys becomes None, etc.):
+        """
+        #this module is intended to enable placing the entire git repo
+        #inside another git repo so it can be pulled/pushed from within
+        #the using applications repo, enabling rapid development
+        
+        import os
+        import sys
+        import asf
+        
+        asf.DEFAULT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        sys.path.append(asf.DEFAULT_DIR)
+        
+        # comment out this line if you want to be garbage collected
+        sys.modules['_do_not_import_asf'] = sys.modules['asf']
+        sys.modules['asf'] = asf
+        import pdb;pdb.set_trace()
+        sys.modules['asf.asf'] = asf
+        """
 
 Tooling
  * Import in a doctest-like format
