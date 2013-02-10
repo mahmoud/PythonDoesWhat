@@ -41,6 +41,9 @@ Future posts
         import pdb;pdb.set_trace()
         sys.modules['asf.asf'] = asf
         """
+ * Properties on metaclasses appear to act surprisingly in that subclasses of the __metaclass__-using parent can't override them,
+  but really work as expected, in that subclasses are still instances of the metaclass.
+ * How does Timsort perform on heapified lists? (compared to already-sorted/random lists)
 
 Tooling
  * Import in a doctest-like format
